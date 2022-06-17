@@ -142,7 +142,7 @@ body{
 .buttons li:hover{
 	animation-duration: 0.5s;
 	animation-name: back;
-	background:v
+	background: linear-gradient(90deg, #482676 , #00F3FF);
 }
 
 @keyframes back {
