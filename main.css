@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@1&family=Do+Hyeon&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@1&family=Do+Hyeon&display=swap');*/
 
 
 /* beginning of the background */
@@ -67,11 +67,47 @@ html {
   }
 }
 
+
+.hide{
+	opacity: 0;
+	transform: translateY(70%);
+}
+
+.hide.show{
+	animation-duration: 1s;
+	animation-name: slidein;
+	opacity: 1;
+	transform: translateY(0%);
+}
+
+@keyframes slidein {
+	0%{
+		opacity: 0;
+		transform: translateY(40%);
+	}
+	
+	10%{
+		transform: translateY(0%);
+		transform: translateX(-5%);
+		opacity: 0;
+	}	
+	
+	100%{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+
 /* end of background */
 
 *{
 	font-family: 'Do Hyeon', sans-serif;
 	box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body{
@@ -109,7 +145,8 @@ body{
 	float: left;
 }
 
-.buttons{
+#links-01{
+	opacity: 1;
 	margin: 9.5px;
 	align-items: center;
 	display: flex;
@@ -119,7 +156,7 @@ body{
 	padding: 0;
 }
 
-.buttons li{
+#links-01 li{
 	border-radius: 5px;
 	align-items: center;
 	width: 170px;
@@ -130,53 +167,19 @@ body{
 	margin-right: 14px;
 }
 
-.buttons li div{
+#links-01 li div{
 	margin-top: 3px;
 	height: 50%;
 }
 
-.buttons li div a{
+#links-01 li div a{
 	color: aliceblue;
 }
 
-.buttons li:hover{
-	animation-duration: 0.5s;
+#links-01 li:hover{
+	animation-duration: 0.4s;
 	animation-name: back;
-	background: linear-gradient(90deg, #482676 , #00F3FF);
-}
-
-@keyframes back {
-	0% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 0% );}
-	4% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 8% );}
-	8% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 16% );}
-	12% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 24% );}
-	16% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 32% );}
-	20% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 40% );}
-	24% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 48% );}
-	28% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 56% );}
-	32% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 64% );}
-	36% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 72% );}
-	40% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 80% );}
-	44% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 88% );}
-	48% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 96% );}
-	49% {background: linear-gradient(90deg, #00F3FF ,rgba(14, 19, 25, 0.8) 98% );}
-
-	50% {background: linear-gradient(90deg, #482676 , #00F3FF 0%);}
-	
-	54% {background: linear-gradient(90deg, #482676 , #00F3FF 8%);}
-	/*58% {background: linear-gradient(90deg, #482676 , #00F3FF 16%);}*/
-	62% {background: linear-gradient(90deg, #482676 , #00F3FF 24%);}
-	/*66% {background: linear-gradient(90deg, #482676 , #00F3FF 32%);}*/
-	70% {background: linear-gradient(90deg, #482676 , #00F3FF 40%);}
-	/*74% {background: linear-gradient(90deg, #482676 , #00F3FF 48%);}*/
-	78% {background: linear-gradient(90deg, #482676 , #00F3FF 56%);}
-	/*82% {background: linear-gradient(90deg, #482676 , #00F3FF 64%);}*/
-	86% {background: linear-gradient(90deg, #482676 , #00F3FF 72%);}
-	/*90% {background: linear-gradient(90deg, #482676 , #00F3FF 80%);}*/
-	94% {background: linear-gradient(90deg, #482676 , #00F3FF 88%);}
-	94% {background: linear-gradient(90deg, #482676 , #00F3FF 96%);}
-	
-	100% {background: linear-gradient(90deg, #482676 , #00F3FF);}
+	background: #00F3FF
 }
 
 .button{
@@ -273,7 +276,7 @@ body{
 	margin: 11px;
 }
 
-#text-01 ul{
+#links-02{
 	margin-top: 5px;
 	display: flex;
 	flex-flow: row wrap;
@@ -283,7 +286,7 @@ body{
 	width: 100%;
 }
 
-#text-01 ul li{
+#links-02 li{
 	border-radius: 6px;
 	padding: 0px;
 	list-style: none;
@@ -294,11 +297,11 @@ body{
 	margin-top: 25px;
 }
 
-#text-01 ul li:hover{
+#links-02 li:hover{
 		transform: translateY(-8px);
 }
 
-#text-01 ul li a{
+#links-02 li a{
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -307,7 +310,7 @@ body{
 	
 }
 
-#text-01 ul li a img{
+#links-02 li a img{
 	margin: auto;
 	width: 55%;
 	height: 55%;
@@ -326,25 +329,30 @@ body{
 
 /* beginning of the first fast travel */
 
-#button-02{
+#links-03{
 	float: left;
 	padding: 0;
 	list-style: none;
 	width: 50px;
 	height: 50px;
 	margin: 20px;
-	margin-left: 615px;
-	margin-right: 615px; 
+	margin-left: 40%;
+	margin-right: 40%; 
 	transition: 0.2s;
 	
 }
 
-#button-02 li{
-	width: inherit;
-	height: inherit;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
+#links-05{
+	float: left;
+	padding: 0;
+	list-style: none;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	margin-left: 40%;
+	margin-right: 40%;
+	transition: 0.2s;
+	
 }
 
 #icon-05{
@@ -356,13 +364,19 @@ body{
 	
 }
 
-#button-02:hover{
+#links-03:hover{
 	width: 55px;
 	height: 55px;
 	margin-bottom: 17.5px;
 	margin-top: 17.5px;
 }
 
+#links-05:hover{
+	width: 55px;
+	height: 55px;
+	margin-bottom: 2.5px;
+	margin-top: 2.5px;
+}
 
 #icon-05a{
 	width: 100%;
@@ -383,7 +397,7 @@ body{
 
 #container-03{
 	border-radius: 10px;
-	height: 600px;
+	height: 570px;
 	width: 87%;
     display: flex;
 	flex-flow: row wrap;
@@ -391,7 +405,7 @@ body{
     justify-content: center;
     background-color: #222B38;
 	margin-top: 0px;
-	margin-bottom: 65px;
+	margin-bottom: 50px;
 }
 
 #container-03 h1{
@@ -402,6 +416,7 @@ body{
 	text-shadow: 0.217rem 0.225rem 0rem #00bbbb;
 	margin: 0px;
 	margin-top: 20px;
+	letter-spacing: 0.2em
 }
 
 /* Carousel*/
@@ -411,12 +426,12 @@ body{
 
 /* Slideshow container */
 .slideshow-container {
-	height: 520px;
+	height: 470px;
 	width: 100%;
 	max-width: 1500px;
 	position: relative;
 	margin: auto;
-	margin-bottom: 40px;
+	margin-bottom: 0px;
 }
 .project-item{
 	pointer-events: none;
@@ -451,15 +466,33 @@ body{
 	background-color: rgba(0,0,0,0.8);
 }
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+.dot {
+  cursor: pointer;
+  height: 3px;
+  width: 30px;
+  margin: 0 2px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+#cor_dot{
+	transform: translateY(-25px);
+}
+
+.dot:hover {
+  background-color: #808080;
+}
+
+.active{
+	background-color: #545454;
 }
 
 @-webkit-keyframes fade {
@@ -489,7 +522,6 @@ body{
 	pointer-events: auto;
 	width: 22%;
 	height: 90%;
-	/*background: #00FFCB;*/
 	margin: 1%;
 	transition: 1s;
 	left: 1px;
@@ -514,7 +546,7 @@ body{
 }
 
 .image-02 .name{
-	background: #00F3FF;
+	background: #00c3cd;
 	z-index: 0;
 	position: absolute;
 	transform: rotate(-90deg);
@@ -568,7 +600,7 @@ body{
 	transform: rotate(0deg);
 	width: 100%;
 	left: 100%;
-	background-color: rgba(0, 0, 0 , 0.4);
+	background: rgba(0, 0, 0 , 0.4);
 	min-width: 100%;
 	height: 146px;
 	transform: translate(90px, 70px)
@@ -645,46 +677,95 @@ body{
 	flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+	background-image: url("src/zad.png"), linear-gradient(289deg, rgba(3,3,15,0.38) 50%, #222B38 0%), url("src/image-02.jpg");
+	background-size: 300px, cover, 480px;
+    background-position: center, 0px, 100%, right;
+    background-repeat: repeat, repeat, no-repeat;
     background-color: #222B38;
 	margin-top: 0px;
 	margin-bottom: 25px;
 }
 
-#container-04 h1{
+#container-04 .wrapper{
+	width: 100%;
+	height: 100%;
+	padding-top: 5%;
+	padding-bottom: 7%;
+}
+
+#container-04 .wrapper .inner{
+    display: flex;
+	flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+	width: 50%;
+	height: 100%;
+	margin-right: 50%;
+	margin-left: 0px;
+}
+
+#container-04 .wrapper .inner h1{
 	margin: 21px;
 	letter-spacing: 0.2em;
-	font-size: 40px;
+	font-size: 35px;
 	color: aliceblue;
 	font-family: 'Changa One', cursive;
 	text-transform: uppercase;
 	text-shadow: 0.217rem 0.225rem 0rem #00bbbb;
+	margin-top: 0px;
+	margin-bottom: 70%;
 }
 
 #container-05{
 	border-radius: 10px;
     display: flex;
-	height: 300px;
+	height: 380px;
 	width: 87%;
 	flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+	background-image: url("src/zad.png"), linear-gradient(60deg, rgba(3,3,15,0.38) 54%, #222B38 0%), url("src/image-03.png");
+	background-size: 300px, cover, 597px;
+    background-position: center, 0px, -20px, left;
+    background-repeat: repeat, repeat, no-repeat;
     background-color: #222B38;
 	margin-top: 0px;
-	margin-bottom: 5px;
+	margin-bottom: 25px;
 }
 
-#container-05 h1{
-	margin: 21px;
+#container-05 .wrapper{
+	width: 100%;
+	height: 100%;
+	padding-top: 4%;
+	padding-bottom: 7%;
+}
+
+#container-05 .wrapper .inner{
+    display: flex;
+	flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+	width: 56%;
+	height: 100%;
+	margin-left: 44%;
+	margin-right: 0px;
+}
+
+#container-05 .wrapper .inner h1{
+	margin: 0px;
+	margin-bottom: 20px;
 	letter-spacing: 0.2em;
-	font-size: 40px;
+	font-size: 35px;
 	color: aliceblue;
 	font-family: 'Changa One', cursive;
 	text-transform: uppercase;
 	text-shadow: 0.217rem 0.225rem 0rem #00bbbb;
+	margin-top: 0px;
 }
 
 #icons_wrapper{
-	width: 100%;
+	margin-left: 10%;
+	width: 90%;
 	height: 80%;
 }
 
@@ -697,16 +778,19 @@ body{
 	padding: 0px;
 	list-style: none;
 	width: 100%;
+	max-width: 427.5px;
 }
 
 .icon_con{
 	border-radius: 6px;
 	padding: 0px;
 	list-style: none;
-	width: 60px;
-	height: 60px;
+	width: 41px;
+	height: 41px;
 	transition: 0.3s;
-	margin: 12px;
+	margin: 5px;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 }
 
 .icon_con:hover{
@@ -728,15 +812,35 @@ body{
 	height: 55%;
 }
 
+#icon-11{
+	margin-left: 15%;
+}
+#icon-14{
+	margin-right: 10%;
+}
+#icon-15{
+	margin-left: 30%;
+}
+#icon-17{
+	margin-right: 20%;
+}
+#icon-18{
+	margin-left: 40%;
+}
+#icon-19{
+	margin-right: 25%;
+}
 
 #icon-12, #icon-13{
 	border-radius: 6px;
 	padding: 0px;
 	list-style: none;
-	width: 60px;
-	height: 60px;
+	width: 41px;
+	height: 41px;
 	transition: 0.3s;
-	margin: 12px;
+	margin: 5px;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 }
 
 #icon-12:hover, #icon-13:hover{
@@ -832,7 +936,7 @@ body{
 /* end of container-04 */
 
 
-#button-03{
+#links-05{
 	transform: rotate(180deg);
 }
 
@@ -843,8 +947,49 @@ body{
 	flex-flow: row wrap;
 	justify-content: center;
 	width: 100%;
-	height: 90px;
+	height: 130px;
 	float: left;
+	margin-top: 20px;
+}
+
+#container-06 .wrapper .inner{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+#container-06 .wrapper .inner div{
+	width: 20%;
+}
+
+#container-06 .wrapper .inner div p{
+	text-align: center;
+	color: darkgrey;
+}
+
+#container-06 .wrapper .inner div ul{
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+#container-06 .wrapper .inner div ul li{
+	width: 100%;
+}
+
+#links-06, #links-07, #links-08{
+	padding: 0;
+}
+
+#links-06 li, #links-07 li, #links-08 li{
+	text-align: center;
+}
+
+#links-06 li a, #links-07 li a, #links-08 li a{
+	color: aliceblue;
+	text-decoration: none;
 }
 
 /* Размеры до 1000  пикселей */
@@ -857,21 +1002,35 @@ body{
 		margin-bottom: 0px;
 	}
 
-	#button-02{
+	#links-03{
 		width: 45px;
 		height: 45px;
 		margin-bottom: 25px;
 		margin-top: 25px;
 	}
 	
-	#button-02:hover{
+	#links-03:hover{
 		width: 49px;
 		height: 49px;
 		margin-bottom: 23px;
 		margin-top: 23px;
 	}
 
-	.buttons li{
+	#links-05{
+		width: 45px;
+		height: 45px;
+		margin-bottom: 25px;
+		margin-top: 25px;
+	}
+	
+	#links-05:hover{
+		width: 49px;
+		height: 49px;
+		margin-bottom: 23px;
+		margin-top: 23px;
+	}
+	
+	#links-01 li{
 		width: 140px;
 	}
 	
@@ -898,6 +1057,11 @@ body{
 		transform: translate(-50%, -25%);
 	}
 	
+	#image-01 img:hover{
+		width: 370%;
+		height: 370%;
+	}
+	
 	#text-01 h1{
 		font-size: 45px;
 		margin-bottom: 14px;
@@ -918,15 +1082,14 @@ body{
 		margin-top: 10px;
 	}
 	
-	#text-01 ul li{
+	#links-02 li{
 		margin: 12px;
 		margin-top: 13px;
 	}
 	
 	#container-03{
-		height: 570px;
+		height: 490px;
 		width: 94%;
-		margin-top: px;
 		margin-bottom: 30px;
 	}
 	
@@ -938,10 +1101,15 @@ body{
 	}
 	
 	.slideshow-container{
-		height: 430px;
-		margin-bottom: 30px;
+		height: 420px;
+		margin-bottom: 0px;
 	}
-		.project-item{
+	
+	#cor_dot{
+		transform: translateY(-43px);
+	}
+	
+	.project-item{
 		height: 410px;
 	}
 	
@@ -1029,9 +1197,16 @@ body{
 		margin: 30px;
 	}
 
+	#container-04 .wrapper .inner{
+		width:  100%;
+		margin-right: 0;
+	}
 	
 	#container-05{
-		height: 280px;
+		background-image: url("src/zad.png"), linear-gradient(60deg, rgba(3,3,15,0.38) 50%, #222B38 0%), url("src/image-03.png");
+		background-size: 300px, cover, 465px;
+    	background-position: center, 0px, -20px, left;
+		height: 300px;
 		width: 94%;
 		margin-top: 10px;
 		margin-bottom: 30px;
@@ -1042,21 +1217,80 @@ body{
 		margin: 30px;
 	}
 
-	#icon-12, #icon-13{
+	#icons_wrapper{
 		margin: 10px;
-		width: 50px;
-		height: 50px;
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	
+	.icon_inner{
+		max-width: none;
+	}
+	
+	#container-05 .wrapper .inner{
+		width:  100%;
+		margin-left: 0px;
+	}
+
+	#icon-11{
+		margin-left: 7px;
+	}
+
+	#icon-14{
+		margin-right: 7px;
+	}
+
+
+	#icon-15{
+		margin-left: 7px;
+	}
+
+	#icon-17{
+		margin-right: 7px;
+	}
+
+	#icon-18{
+		margin-left: 7px;
+	}
+
+	#icon-19{
+		margin-right: 7px;
+	}
+	
+	#icon-12, #icon-13{
+		margin: 7px;
+		width: 45px;
+		height: 45px;
 	}
 	
 	.icon_con{
-		margin: 10px;
-		width: 50px;
-		height: 50px;
+		margin: 7px;
+		width: 45px;
+		height: 45px;
 	}
 	
 	.icon_inner{
 		margin: 0px;
 	}
+	
+	#links-05{
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+	
+	#links-05:hover{
+		margin-top: 1px;
+		margin-bottom: 1px;
+	}
+	
+	#container-06 .wrapper .inner div{
+		width: 25%;
+	}
+	
+	#links-06 li a, #links-07 li a, #links-08 li a{
+		font-size: 13px;
+	}
+	
 }
 
 /* Размеры до 539 пикселей */
@@ -1064,40 +1298,17 @@ body{
 	#container-01 {
 		height: 120px;
 	}
-	.buttons li {
+	#links-01 li {
 		width: 180px;
 		margin-left: 0px;
 		margin-right: 0px;
 		margin-bottom: 10px;
 		margin-top: 10px;
 	}
-	.buttons li a{
+	#links-01 li a{
 		margin: 4px;
 	}
 	
-	#container-04{
-		height: 265px;
-	}
-	
-	#container-05{
-		height: 265px;
-	}
-	
-	#icon-12, #icon-13{
-		margin: 8px;
-		width: 48px;
-		height: 48px;
-	}
-	
-	.icon_con{
-		margin: 8px;
-		width: 48px;
-		height: 48px;
-	}
-	
-	.icon_inner{
-		margin: 0px;
-	}
 }
 
 /* Размеры от 1000 до 1700  пикселей */
@@ -1106,14 +1317,14 @@ body{
 		height: 65px;
 	}
 	
-	.buttons li {
+	#links-01 li {
 		width: 180px;
 		height: 30px;
 		margin-left: 45px;
 		margin-right: 45px;
 	}
 	
-	.buttons li div{
+	#links-01 li div{
 		margin-top: 7.5px;
 }
 	
@@ -1125,20 +1336,34 @@ body{
 		margin-bottom: 0px;
 	}
 
-	#button-02{
+	#links-03{
 		width: 55px;
 		height: 55px;
 		margin-bottom: 25px;
 		margin-top: 25px;
 	}
 	
-	#button-02:hover{
+	#links-03:hover{
 		width: 60px;
 		height: 60px;
 		margin-bottom: 22.5px;
 		margin-top: 22.5px;
 	}
 
+	#links-05{
+		width: 55px;
+		height: 55px;
+		margin-bottom: 25px;
+		margin-top: 25px;
+	}
+	
+	#links-05:hover{
+		width: 60px;
+		height: 60px;
+		margin-bottom: 22.5px;
+		margin-top: 22.5px;
+	}
+	
 	#container-03{
 		height: 570px;
     	width: 87%;
@@ -1146,6 +1371,21 @@ body{
 		margin-top: 0px;
 		margin-bottom: 20px;
 	}
+	
+	.slideshow-container{
+		height: 470px;
+		margin-bottom: 0px;
+	}
+	
+	.dot {
+  		height: 3px;
+  		width: 30px;
+	}
+	
+	#cor_dot{
+		transform: translateY(-25px);
+	}
+	
 	#image-01 img{
 		width: 600px;
 		height: 600px;
@@ -1179,7 +1419,7 @@ body{
 		font-size: 17px;
 	}
 	
-	#text-01 ul li{
+	#links-02 li{
 		width: 50px;
 		height: 50px;
 		margin: 12px;
@@ -1248,6 +1488,8 @@ body{
 	}
 	
 	#container-04{
+		background-size: 300px, cover, 524px;
+    	background-position: center, 0px, 100%, right;
 		max-width: 930px;
 		width: 87%;
 		margin-top: 20px;
@@ -1259,10 +1501,12 @@ body{
 	}
 	
 	#container-05{
+		background-size: 300px, cover, 685px;
+    	background-position: center, 0px, -20px, left;
 		max-width: 930px;
 		width: 87%;
 		margin-top: 20px;
-		height: 330px;
+		height: 440px;
 	}
 	
 	#container-05 h1{
@@ -1270,19 +1514,34 @@ body{
 	}
 
 	#icon-12, #icon-13{
-		margin: 15px;
-		width: 65px;
-		height: 65px;
+		margin: 10px;
+		width: 54px;
+		height: 54px;
 	}
-	
+
 	.icon_con{
-		margin: 15px;
-		width: 65px;
-		height: 65px;
+		margin: 10px;
+		width: 54px;
+		height: 54px;
 	}
 	
 	.icon_inner{
-		margin: 0px;
+		margin: 0;
+		margin-left: 2%;
+	}
+	
+	#links-05{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	
+	#links-05:hover{
+		margin-top: 2.5px;
+		margin-bottom: 2.5px;
+	}
+	
+	#links-06 li a, #links-07 li a, #links-08 li a{
+		font-size: 15px;
 	}
 	
 }
@@ -1292,19 +1551,19 @@ body{
 	#container-01 {
 		height: 89px;
 	}
-	.buttons li {
+	#links-01 li {
 		width: 250px;
 		height: 40px;
 		margin-left: 50px;
 		margin-right: 50px;
 	}
 	
-	.buttons li div{
+	#links-01 li div{
 		margin: 10px;
 		height: 60%;
 	}
 	
-	.buttons li div a{
+	#links-01 li div a{
 		font-size: 18px;
 	}
 	
@@ -1316,20 +1575,34 @@ body{
 		margin-bottom: 0px;
 	}
 
-	#button-02{
+	#links-03{
 		width: 65px;
 		height: 65px;
 		margin-bottom: 30px;
 		margin-top: 30px;
 	}
 	
-	#button-02:hover{
+	#links-03:hover{
 		width: 75px;
 		height: 75px;
 		margin-bottom: 25px;
 		margin-top: 25px;
 	}
 
+	#links-05{
+		width: 65px;
+		height: 65px;
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+	
+	#links-05:hover{
+		width: 75px;
+		height: 75px;
+		margin-bottom: 25px;
+		margin-top: 25px;
+	}
+	
 	#image-01 img{
 		width: 850px;
 		height: 850px;
@@ -1373,7 +1646,7 @@ body{
 		margin-top: 25px;
 	}
 	
-	#text-01 ul li{
+	#links-02 li{
 		width: 70px;
 		height: 70px;
 		margin: 15px;
@@ -1382,10 +1655,10 @@ body{
 	
 	#container-03{
 		max-width: none;
-		height: 598px;
+		height: 590px;
 		width: 1280px;
 		margin-top: 0px;
-		margin-bottom: 30px;
+		margin-bottom: 22px;
 	}
 	
 	#container-03 h1{
@@ -1396,8 +1669,17 @@ body{
 	.slideshow-container{
 		width: 1270px;
 		margin: 0px;
-		height: 480px;
+		height: 470px;
 		margin-bottom: 13px;
+	}
+	
+	.dot {
+  		height: 4px;
+  		width: 30px;
+	}
+	
+	#cor_dot{
+		transform: translateY(-30px);
 	}
 	
 	.project-item{
@@ -1436,8 +1718,12 @@ body{
 	}
 	
 	#container-04{
-		margin-top: 20px;
-		height: 390px;
+		background-image: url("src/zad.png"), linear-gradient(289deg, rgba(3,3,15,0.38) 50%, #222B38 0%), url("src/image-02.jpg");
+		background-size: 300px, cover, 718px;
+    	background-position: center, 0px, 100%, right;
+		margin-top: 22px;
+		margin-bottom: 22px;
+		height: 450px;
 		width: 1280px;
 	}
 	
@@ -1446,29 +1732,58 @@ body{
 	}
 	
 	#container-05{
-		margin-top: 20px;
-		height: 390px;
+		background-size: 300px, cover, 925px;
+    	background-position: center, 0px, -20px, left;
+		margin-top: 22px;
+		margin-bottom: 20px;
+		height: 600px;
 		width: 1280px;
 	}
 	
-	#container-05 h1{
-		margin: 40px;
+	#container-05 .wrapper .inner h1{
+		font-size: 50px;
+		margin-left: 60px;
 	}
 
 	#icon-12, #icon-13{
-		margin: 18px;
-		width: 70px;
-		height: 70px;
+		margin: 15px;
+		width: 64px;
+		height: 64px;
 	}
 	
 	.icon_con{
-		margin: 18px;
-		width: 70px;
-		height: 70px;
+		margin: 15px;
+		width: 64px;
+		height: 64px;
 	}
 	
 	.icon_inner{
-		margin: 0px;
+		max-width: none;
 	}
+	
+	#container-06{
+		height: 130px;
 }
+
+	#links-06 li a, #links-07 li a, #links-08 li a{
+		font-size: 16px;
+	}
+	
+	#links-05{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	
+	#links-05:hover{
+		margin-bottom: 15px;
+		margin-top: 15px;
+	}
+	
+}
+
+
+
+
+
+
 

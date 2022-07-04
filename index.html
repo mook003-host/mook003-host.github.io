@@ -4,9 +4,11 @@
 <meta charset="utf-8">
 <title>Mook</title>
 <link rel="stylesheet" href="main.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+	
 	<div id="stars"></div>
 	<div id="stars2"></div>
 	<div id="stars3"></div>
@@ -15,7 +17,7 @@
 		
 		<div id="container-01">
 		
-			<ul id="button-01" class="buttons" style="opacity: 1;">
+			<ul id="links-01">
 				
 				<li>
 					<div><a href="#home-section" class="button">W.I.P</a></div>
@@ -42,16 +44,16 @@
 			
 			<div id="text-01">
 				
-				<h1>Fabian</h1>
+				<h1 class = "hide">Eugene</h1>
 				
-				<hr></hr>
+				<hr class = "hide"></hr>
 			
-				<h2>programmer</h2>
+				<h2 class = "hide">programmer</h2>
 			
-				<p>
+				<p class = "hide">
 					
 					<span>
-						Hi i'm Fabian! You can also call me Mook or Eugene
+						Hi i'm Eugene! You can also call me Mook or Fabian
 					</span>
 					
 					<span>
@@ -62,7 +64,7 @@
 				</p>
 				
 			
-				<ul>
+				<ul  class = "hide" id="links-02">
 					<li id="icon-01">
 						<a href="https://vk.com/mook003">
 							<img src="src/vk-icon.png">
@@ -88,10 +90,8 @@
 			</div>
 			
 		</div>
-	
 
-		<ul id="button-02">
-			<li>
+		<a class="scrollto" id="links-03" href="#container-06">
 				<div id="icon-05">
 					
 					<img id="icon-05a" src="src/link-button.png">
@@ -99,18 +99,17 @@
 					<img id="icon-05b" src="src/link-button-2.png">
 					
 				</div>		
-			</li>
-		</ul>		
+		</a>		
 		
 		<div id="container-03">
 		
-			<h1>Projects</h1>
+			<h1 class = "hide">Projects</h1>
 			
 			
 			
 			
 		 <!stop>
-			
+		<div class="hide" style="width: 100%; height: 100%;">
 				<!-- Slideshow container -->
 		<div class="slideshow-container">
 		
@@ -295,117 +294,153 @@
 		</div>
 		<br>
 			
+		<div id="cor_dot" style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		</div>
 		</div>
 	
-
 		<div id="container-04">
-			<h1>About me</h1>
-			
-			<div id="text-02">
+			<div class="wrapper">
+				<div class="inner">
+					<h1  class = "hide">About me</h1>
+					
+				</div>
 			</div>
 			
 		</div>
-
 
 		<div id="container-05">
+			<div class="wrapper">
+				<div class="inner">
+					<h1  class = "hide">Contact me</h1>
 	
-			<h1>Contact me</h1>
-	
-			<div id="icons_wrapper">
-				
-				<ul class="icon_inner">
-					<li class="icon_con" id="icon-06">
-						<a href="https://toyhou.se/Mook003">
-							<img src="src/th-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-07">
-						<a href="https://vk.com/mook003">
-							<img src="src/vk-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-08">
-						<a href="https://steamcommunity.com/id/mook003/">
-							<img src="src/steam-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-09">
-						<a href="https://www.facebook.com/profile.php?id=100082538914857">
-							<img src="src/fa-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-10">
-						<a href="https://github.com/mook003">
-							<img src="src/git-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-11">
-						<a href="https://www.linkedin.com/in/eugene-shlomov-174b96236">
-							<img src="src/linkedin-icon.png">
-						</a>
-					</li>
-					<li id="icon-12">
-						<a href="#discord">
-							<img src="src/dis-icon.png">
-						</a>
-					</li>
-				</ul>
-				
-				<ul class="icon_inner">
-					<li id="icon-13">
-						<a href="shlomov_em@gkl-kemerovo.ru">
-							<img src="src/gmail-icon.png">
-						</a>
-					</li>
+						<div class = "hide" id="icons_wrapper">
+							
+							<ul id="links-04" class="icon_inner">
+								<li class="icon_con" id="icon-06">
+									<a href="https://toyhou.se/Mook003">
+										<img src="src/th-icon.png">
+									</a>
+								</li>
+							<li class="icon_con" id="icon-07">
+								<a href="https://vk.com/mook003">
+									<img src="src/vk-icon.png">
+								</a>
+							</li>
+							<li class="icon_con" id="icon-08">
+								<a href="https://steamcommunity.com/id/mook003/">
+									<img src="src/steam-icon.png">
+								</a>
+							</li>
+							<li class="icon_con" id="icon-09">
+								<a href="https://www.facebook.com/profile.php?id=100082538914857">
+									<img src="src/fa-icon.png">
+								</a>
+							</li>
+							<li class="icon_con" id="icon-10">
+								<a href="https://github.com/mook003">
+									<img src="src/git-icon.png">
+								</a>
+							</li>
+							<li class="icon_con" id="icon-11">
+								<a href="https://www.linkedin.com/in/eugene-shlomov-174b96236">
+									<img src="src/linkedin-icon.png">
+								</a>
+							</li>
+							<li id="icon-12">
+								<a href="#discord">
+									<img src="src/dis-icon.png">
+								</a>
+							</li>
+							<li id="icon-13">
+								<a href="shlomov_em@gkl-kemerovo.ru">
+									<img src="src/gmail-icon.png">
+								</a>
+							</li>
 
-					<li class="icon_con" id="icon-14">
-						<a href="https://www.paypal.me/M00k003">
-							<img src="src/pay-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-15">
-						<a href="https://www.instagram.com/shlomovzhenia/">
-							<img src="src/inst-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-16">
-						<a href="https://t.me/mook003">
-							<img src="src/tg-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-17">
-						<a href="https://zen.ly/Mook003">
-							<img src="src/zen-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-18">
-						<a href="https://twitter.com/Fabian8x8">
-							<img src="src/twit-icon.png">
-						</a>
-					</li>
-					<li class="icon_con" id="icon-19">
-						<a href="https://www.reddit.com/user/M00K64">
-							<img src="src/red-icon.png">
-						</a>
-					</li>
-				</ul>
+							<li class="icon_con" id="icon-14">
+								<a href="https://www.paypal.me/M00k003">
+									<img src="src/pay-icon.png">
+								</a>
+							</li>
+							<li class="icon_con" id="icon-15">
+								<a href="https://www.instagram.com/shlomovzhenia/">
+									<img src="src/inst-icon.png">
+								</a>
+							</li>
+							<li class="icon_con" id="icon-16">
+								<a href="https://t.me/mook003">
+									<img src="src/tg-icon.png">
+								</a>
+							</li>
+							<li class="icon_con" id="icon-17">
+								<a href="https://zen.ly/Mook003">
+									<img src="src/zen-icon.png">
+								</a>
+							</li>
+							<li class="icon_con" id="icon-18">
+								<a href="https://twitter.com/Fabian8x8">
+									<img src="src/twit-icon.png">
+								</a>
+							</li>
+							<li class="icon_con" id="icon-19">
+								<a href="https://www.reddit.com/user/M00K64">
+									<img src="src/red-icon.png">
+								</a>
+							</li>
+						</ul>
 
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<ul id="button-02">
-			<li  id="button-03">
+		<a class="scrollto" id="links-05" href="#container-01">
 				<div id="icon-05">
 					
 					<img id="icon-05a" src="src/link-button.png">
-					
 					<img id="icon-05b" src="src/link-button-2.png">
 					
 				</div>		
-			</li>
-		</ul>	
+		</a>	
 
-		<div id="container-06"></div>
+		<div id="container-06">
+			<div class="wrapper">
+				<div class="inner">
+					<div>
+						<p>Navigation</p>
+						<ul id="links-06">
+							<li> <a class="scrollto"  href="#container-03">Projects</a> </li>
+							<li> <a class="scrollto"  href="#container-04">About me</a> </li>
+							<li> <a class="scrollto"  href="#container-05">Links</a> </li>
+						</ul>
+					</div>
+					
+					<div>
+						<p>Gallery</p>
+						<ul id="links-07">
+							<li> <a class="scrollto"  href="#container-03">Digital Illustration</a> </li>
+							<li> <a class="scrollto"  href="#container-04">Traditional Art</a> </li>
+							<li> <a class="scrollto"  href="#container-05">Amimation</a> </li>
+					</div>
+					
+					<div>
+						<p>Other</p>
+						<ul id="links-08">
+							<li> <a class="scrollto"  href="#container-03">Prices</a> </li>
+							<li> <a class="scrollto"  href="#container-04">T.O.S</a> </li>
+							<li> <a class="scrollto"  href="#container-05">Rules</a> </li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+
+			
+		</div>
 	</section>
 	
 	
