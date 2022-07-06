@@ -1,15 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@1&family=Do+Hyeon&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@1&family=Do+Hyeon&display=swap');*/
 
 
 /* beginning of the background */
 
 html {
-  background: #12161d;
-  overflow: hidden;
+	background: #12161d;
+	overflow: hidden;
 }
+
+*{scroll-behavior: smooth; }
+
 #stars {
   width: 1px;
   height: 1px;
@@ -67,10 +70,9 @@ html {
   }
 }
 
-
 .hide{
 	opacity: 0;
-	transform: translateY(70%);
+	transform: translateY(100px);
 }
 
 .hide.show{
@@ -97,7 +99,6 @@ html {
 		opacity: 1;
 	}
 }
-
 
 /* end of background */
 
@@ -191,7 +192,6 @@ body{
 
 /* end of container-01 */
 
-
 /* beginning of the container-02 */
 
 #container-02{
@@ -252,7 +252,7 @@ body{
 #text-01 h2{
 	text-align: center;
 	color: #00bbbb;
-	font-size: 15px;
+	font-size: 17px;
 	text-transform: uppercase;
 	letter-spacing: 0.17em;
 	margin-top: 18px;
@@ -325,7 +325,6 @@ body{
 #icon-04{background: linear-gradient(45deg, #3e4ff9, #51277f);}
 
 /* end of container-02 */
-
 
 /* beginning of the first fast travel */
 
@@ -672,13 +671,13 @@ body{
 #container-04{
 	border-radius: 10px;
     display: flex;
-	height: 300px;
+	height: 380px;
 	width: 87%;
 	flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-	background-image: url("src/zad.png"), linear-gradient(289deg, rgba(3,3,15,0.38) 50%, #222B38 0%), url("src/image-02.jpg");
-	background-size: 300px, cover, 480px;
+	background-image: url("src/zad.png"), linear-gradient(287deg, rgba(3,3,15,0.38) 50%, #222B38 0%), url("src/image-02.jpg");
+	background-size: 300px, cover, 592px;
     background-position: center, 0px, 100%, right;
     background-repeat: repeat, repeat, no-repeat;
     background-color: #222B38;
@@ -689,8 +688,8 @@ body{
 #container-04 .wrapper{
 	width: 100%;
 	height: 100%;
-	padding-top: 5%;
-	padding-bottom: 7%;
+	padding-top: 3%;
+	padding-bottom: 4%;
 }
 
 #container-04 .wrapper .inner{
@@ -698,13 +697,15 @@ body{
 	flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-	width: 50%;
+	width: 48%;
 	height: 100%;
-	margin-right: 50%;
+	margin-right: 52%;
 	margin-left: 0px;
 }
 
 #container-04 .wrapper .inner h1{
+	width: 100%;
+	text-align: center;
 	margin: 21px;
 	letter-spacing: 0.2em;
 	font-size: 35px;
@@ -712,8 +713,26 @@ body{
 	font-family: 'Changa One', cursive;
 	text-transform: uppercase;
 	text-shadow: 0.217rem 0.225rem 0rem #00bbbb;
-	margin-top: 0px;
-	margin-bottom: 70%;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+#container-04 .wrapper .inner hr{
+	width: 30px;
+	height: 0.05rem;
+	background: #FFFFFF;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+#container-04 .wrapper .inner span{
+	text-align: center;
+	font-size: 14px;
+	color: aliceblue;
+	padding-left: 6%;
+	padding-right: 8%;
+	width: 100%;
+	line-height: 27px;
 }
 
 #container-05{
@@ -863,21 +882,21 @@ body{
 }
 
 
-#icon-06{background: linear-gradient(45deg, #3e4ff9, #51277f);}
+#icon-06{background: linear-gradient(45deg, #2f8af2 20%, #b3d4f9);}
 
-#icon-07{background: linear-gradient(45deg, #2f8af2 20%, #b3d4f9);}
+#icon-07{background: linear-gradient(45deg, #4285f4, #ea4235, #fabb00, #35a853);}
 
 #icon-08{background: linear-gradient(180deg, #101624 10%, #1570a5);}
 
-#icon-09{background: linear-gradient(213deg, #28a4e2, #0050b4);}
+#icon-09{background: linear-gradient(180deg, #5662f6, #3700c2);}
 
-#icon-10{background: linear-gradient(180deg, #7e268d 20%, #482676);}
+#icon-10{background: linear-gradient(213deg, #28a4e2, #0050b4);}
 
 #icon-11{background: linear-gradient(45deg, #0a66c2, #00fdff);}
 
-#icon-12{background: linear-gradient(180deg, #5662f6, #3700c2);}
+#icon-12{background: linear-gradient(45deg, #3e4ff9, #51277f);}
 
-#icon-13{background: linear-gradient(45deg, #4285f4, #ea4235, #fabb00, #35a853);}
+#icon-13{background: linear-gradient(180deg, #7e268d 20%, #482676);}
 
 #icon-14{background: linear-gradient(180deg, #283593 20%, #03a9f4);}
 
@@ -891,42 +910,35 @@ body{
 
 #icon-19{background: linear-gradient(180deg, #ff7d13, #ed0922);}
 
-
 #icon-08 a img{
 	width: 65%;
 	height: 65%;
 }
 
-
-#icon-10 a img{
+#icon-09 a img{
 	width: 70%;
 	height: 70%;
 }
-
-
-#icon-12 a img{
-	width: 70%;
-	height: 70%;
-}
-
 
 #icon-13 a img{
 	width: 70%;
 	height: 70%;
 }
 
+#icon-07 a img{
+	width: 70%;
+	height: 70%;
+}
 
 #icon-17 a img{
 	width: 65%;
 	height: 65%;
 }
 
-
 #icon-18 a img{
 	width: 70%;
 	height: 70%;
 }
-
 
 #icon-19 a img{
 	width: 85%;
@@ -1186,7 +1198,8 @@ body{
 	
 
 	#container-04{
-		height: 280px;
+		background-image: url("src/zad.png"), linear-gradient(289deg, rgba(3,3,15,0.38) 50%, #222B38 0%), url("src/image-02.jpg");
+		height: 300px;
 		width: 94%;
 		margin-top: 10px;
 		margin-bottom: 30px;
@@ -1326,7 +1339,7 @@ body{
 	
 	#links-01 li div{
 		margin-top: 7.5px;
-}
+	}
 	
 	#container-02{
 		height: 560px;
@@ -1488,16 +1501,41 @@ body{
 	}
 	
 	#container-04{
-		background-size: 300px, cover, 524px;
+		background-image: url("src/zad.png"), linear-gradient(289deg, rgba(3,3,15,0.38) 50%, #222B38 0%), url("src/image-02.jpg");
+		background-size: 300px, cover, 575px;
     	background-position: center, 0px, 100%, right;
 		max-width: 930px;
 		width: 87%;
 		margin-top: 20px;
-		height: 330px;
+		height: 370px;
 	}
 	
 	#container-04 h1{
 		margin: 25px;
+	}
+	
+	#container-04 .wrapper .inner h1{
+		margin: 10px;
+		font-size: 35px;
+		margin-bottom: 10;
+	}
+	
+	#container-04 .wrapper{
+		padding: 20px;
+	}
+	
+	#container-04 .wrapper .inner{
+		width: 44%;
+		margin-right: 55%;
+	}
+	
+	#container-04 .wrapper .inner span{
+		padding: 10px;
+		font-size: 17px;
+	}
+	
+	#container-04 .wrapper .inner hr{
+		width: 45px;
 	}
 	
 	#container-05{
@@ -1639,7 +1677,7 @@ body{
 
 	#text-01 p{
 		margin-top: 10px;
-		font-size: 21px;
+		font-size: 22px;
 	}
 	
 	#text-01 p span{
@@ -1727,9 +1765,35 @@ body{
 		width: 1280px;
 	}
 	
-	#container-04 h1{
-		margin: 40px;
+	#container-04 .wrapper .inner h1{
+		margin: 10px;
+		font-size: 50px;
+		margin-bottom: 0;
 	}
+	
+	#container-04 .wrapper{
+		padding: 30px;
+	}
+	
+	#container-04 .wrapper .inner{
+		width: 40%;
+		margin-right: 60%;
+	}
+	
+	#container-04 .wrapper .inner hr{
+		width: 45px;
+	}
+
+#container-04 .wrapper .inner span{
+	text-align: center;
+	font-size: 22px;
+	color: aliceblue;
+	padding-left: 0%;
+	padding-right: 0%;
+	width: 100%;
+	line-height: 27px;
+}
+	
 	
 	#container-05{
 		background-size: 300px, cover, 925px;
@@ -1780,10 +1844,3 @@ body{
 	}
 	
 }
-
-
-
-
-
-
-

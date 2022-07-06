@@ -28,17 +28,6 @@ function showSlides(n) {
 	dots[slideIndex-1].className += " active";
 }
 
-
-
-jQuery(document).ready(function() {
-jQuery("a.scrollto").click(function () {
-elementClick = jQuery(this).attr("href")
-destination = jQuery(elementClick).offset().top;
-jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
-return false;
-});
-});
-
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
@@ -52,3 +41,5 @@ let elements = document.querySelectorAll('.hide');
 for (let elm of elements) {
   observer.observe(elm);
 }
+
+
